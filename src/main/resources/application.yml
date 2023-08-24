@@ -1,0 +1,46 @@
+spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: development
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: NomNomNumbers
+    url: jdbc:postgresql://localhost:5432/NomNomNumbers
+    password: NomNomNumbers
+  jpa:
+    properties:
+      hibernate:
+        show_sql: 'true'
+    generate-ddl: false
+app:
+  jwt:
+    jwtCookieName: wollit
+    jwtSecret: wollitSecretKey
+    jwtExpirationMs: 86400000
+---
+
+spring:
+  config:
+    activate:
+      on-profile: production
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: NomNomNumbers
+    url: jdbc:postgresql://localhost:5432/NomNomNumbers
+    password: NomNomNumbers
+  jpa:
+    properties:
+      hibernate:
+        show_sql: 'true'
+    generate-ddl: false
+app:
+  jwt:
+    jwtCookieName: wollit
+    jwtSecret: wollitSecretKey
+    jwtExpirationMs: 86400000
