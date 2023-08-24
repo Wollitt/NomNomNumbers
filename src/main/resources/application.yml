@@ -21,7 +21,7 @@ spring:
 app:
   jwt:
     jwtCookieName: wollit
-    jwtSecret: wollitSecretKey
+    jwtSecret: ZmFsbGNoaWVmc2VlbXN3aWxsYmVsaWV2ZWRnb2VzbWVkaWNpbmVuZWlnaGJvcmhvb2Q=
     jwtExpirationMs: 86400000
 ---
 
